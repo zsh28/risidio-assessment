@@ -3,11 +3,14 @@ import nfts from '../data/nfts';
 import { useAuth } from '../AuthContext'; 
 import { useNavigate } from 'react-router-dom';
 
+//this page shows nfts data from the figma canvas
 const NGrid = () => {
+  //get logged in status
   const { addToWallet, loggedIn } = useAuth();
+  //use navigate initialize
   const navigate = useNavigate();
 
-
+  //buy function - this directs the user to the wallet page if  not logged in else adds the nft to the wallet
   const handleBuy = (nft) => {
     if (!loggedIn) {
       navigate('/wallet');

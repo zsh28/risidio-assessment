@@ -7,6 +7,8 @@ import leaArtist from '../images/leasmall.png';
 import julienArtist from '../images/julien.png';
 import mariaArtist from '../images/maria.png';
 
+//set collections like this in order not to repeat the same code
+
 const collections = [
     {id: 1, 
         title: 'Night Sky', 

@@ -6,6 +6,8 @@ import travel from '../images/travel.png';
 import theRain from '../images/rain.png';
 
 //id, title, price, image
+//set nfts like this in order not to repeat the same code
+
 
 const nfts = [
     {id: 1, 

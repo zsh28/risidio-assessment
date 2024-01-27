@@ -1,6 +1,10 @@
 import React from "react";
 import collections from '../data/collections';
 
+
+//this page shows collections data from the figma canvas
+//lists of the collection contains the following data title, tag, image, description, price range, artist, artist name
+//used one function to display the collections data so I dont have to repeat the same code
 function CCard({ title, tags, priceRange, description, artistImage, artistName, image }) {
   return (
     <div className="flex-grow flex flex-col justify-center items-stretch mb-8 overflow-hidden rounded-3xl shadow-lg">
@@ -44,6 +48,7 @@ function CCard({ title, tags, priceRange, description, artistImage, artistName, 
   );
 }
 
+//used one function to display the collections data so I dont have to repeat the same code
 function Cgrid() {
   return (
     <div className="w-full">

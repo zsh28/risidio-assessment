@@ -2,6 +2,7 @@ import * as React from "react";
 import iStars from "../images/stars.png";
 import leaAvatar from "../images/lea.png";
 
+//nft banner component
 function Nftbanner() {
     return (
           <div className="bg-light px-20 py-12 rounded-[30px] max-md:px-5">

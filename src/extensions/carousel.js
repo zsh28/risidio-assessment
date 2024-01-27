@@ -4,7 +4,9 @@ import leaAvatar from "../images/lea.png";
 import { useState, useEffect } from "react";
 import { useAuth } from '../AuthContext';
 
+//proggres bar component
 function ProgressBar({ value, isMobile }) {
+  // progress bar styles
   const progressContainerStyle = {
     borderRadius: "10px",
     height: "20px",
@@ -33,16 +35,19 @@ function ProgressBar({ value, isMobile }) {
     </div>
   );
 }
-
+ //carousel component
 function Carousel() {
+  //get window width
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  //get logged in status
   const { loggedIn } = useAuth();
 
+  //update window width on resize
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-
+    // Add event listener
     window.addEventListener("resize", handleResize);
 
     // Cleanup the event listener on component unmount
@@ -50,9 +55,11 @@ function Carousel() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  //progress bar values
   const progressValues = [1, 0.3, 0, 0, 0, 0];
+  //hide progress bar at less than 775 pixels of width
   const shouldHideProgress = windowWidth < 775; //hide progress bar at less than 775 pixels of width
-
+//handle buy click function - this directs the user to the collections page if logged in, or to the wallet page if not logged in
   const handleBuyClick = () => {
     if (loggedIn) {
         window.location.href = '/collections/';

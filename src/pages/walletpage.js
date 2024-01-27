@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../AuthContext';
 
 const Wallet = () => {
+    //get navigate initialize
     const navigate = useNavigate();
+    //get logged in status
     const { toggleLoggedIn } = useAuth();
   
     const handleLogin = () => {
