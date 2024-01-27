@@ -97,16 +97,19 @@ function Header() {
                 </NFTContainer>
               ) : (
                 <>
-                  <div>You don't own any NFTs yet</div>
-                  <a href="/collections/"
-                    className="text-neutral-50 text-base font-semibold whitespace-nowrap justify-center items-center bg-zinc-800 max-w-[248px] px-16 py-6 rounded-[87px] mx-auto mt-4"
-                    aria-label="Start Shopping"
-                    role="button"
-                  >
-                  <button>
-                    Start Shopping
-                  </button>
-                  </a>
+                  <div>
+                    <div class="text-slate-500 text-1xl max-w-[248px]">
+                      You don't own any NFTs yet
+                    </div>
+                    <><br/><br/></>
+                    <a href="/collections/"
+                      class="text-neutral-50 text-base font-semibold whitespace-nowrap justify-center items-center bg-zinc-800 max-w-[248px] px-16 py-6 rounded-[87px] mx-auto mt-4"
+                      aria-label="Start Shopping"
+                      role="button"
+                    >
+                      Start Shopping
+                    </a>
+                </div>
                 </>
               )}
             </div>
