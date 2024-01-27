@@ -2,6 +2,7 @@ import * as React from "react";
 import iStars from "../images/stars.png";
 import leaAvatar from "../images/lea.png";
 import { useState, useEffect } from "react";
+import { useAuth } from '../AuthContext';
 
 function ProgressBar({ value, isMobile }) {
   const progressContainerStyle = {
@@ -35,6 +36,7 @@ function ProgressBar({ value, isMobile }) {
 
 function Carousel() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const { loggedIn } = useAuth();
 
   useEffect(() => {
     const handleResize = () => {
@@ -50,6 +52,14 @@ function Carousel() {
   }, []);
   const progressValues = [1, 0.3, 0, 0, 0, 0];
   const shouldHideProgress = windowWidth < 775; //hide progress bar at less than 775 pixels of width
+
+  const handleBuyClick = () => {
+    if (loggedIn) {
+        window.location.href = '/collections/';
+    } else {
+        window.location.href = '/wallet';
+    }
+};
 
   return (
     
@@ -99,6 +109,7 @@ function Carousel() {
                 className="text-neutral-50 text-base font-semibold whitespace-nowrap justify-center items-center bg-zinc-800 grow px-16 py-6 rounded-[87px] max-md:px-5"
                 aria-label="Buy"
                 role="button"
+                onClick={handleBuyClick}
               >
                 Buy
               </button>

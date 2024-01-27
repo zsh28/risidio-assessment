@@ -4,13 +4,10 @@ import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
-    <form className="bg-slate-200 flex w-full items-stretch justify-between gap-5 mt-40 pl-12 pr-14 py-9 max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-md:px-5">
+    <div className="bg-slate-200 flex w-full items-stretch justify-between gap-5 mt-40 pl-12 pr-14 py-9 max-md:max-w-full max-md:flex-wrap max-md:mt-10 max-md:px-5">
       <section>
         <div className="text-zinc-800 text-2xl font-extrabold grow shrink basis-auto my-auto">
           MARKETPLACE.
-        </div>
-        <div className="text-zinc-800 text-1xl font-extrabold grow shrink basis-auto my-auto">
-            © 2024 Coded by: Zeeshanali Gulamhusein.
         </div>
       </section>
      
@@ -58,7 +55,7 @@ function Footer() {
 </div>
 
 
-    </form>
+    </div>
   );
 }
 
